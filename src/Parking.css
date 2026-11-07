@@ -1,0 +1,52 @@
+.parking-toolbar { display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:24px; }
+.parking-toolbar label { display:flex; flex-direction:column; gap:7px; color:#5a7087; font-size:12px; font-weight:600; }
+.parking-toolbar select { min-width:230px; max-width:100%; }
+.parking-toolbar .button { flex:0 0 auto; }
+.parking-nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; padding:7px; background:#e9eef4; border-radius:10px; }
+.parking-nav button { padding:13px 18px; border-radius:7px; color:#53667b; background:transparent; cursor:pointer; font:600 12px inherit; }
+.parking-nav button[aria-current] { background:#17283f; color:white; box-shadow:0 3px 8px #17283f22; }
+.parking-page-title { margin:30px 0; }.parking-page-title p { margin-top:12px; font-size:13px; color:#63788f; line-height:1.7; }
+.parking-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; margin:24px 0; }
+.parking-stats article { display:flex; flex-direction:column; gap:12px; padding:24px; background:white; border:1px solid #dfe5ed; border-radius:12px; }
+.parking-stats article:first-child { background:#e9f4d8; border-color:#c9dda7; }
+.parking-stats span { font-size:12px; color:#53667b; }.parking-stats strong { font-size:40px; letter-spacing:-2px; color:#17283f; }.parking-stats small { font-size:11px; color:#63788f; }
+.parking-alert { padding:20px; margin:18px 0; border:1px solid #e6c5b0; border-radius:10px; background:#fff4eb; color:#814b30; font-size:13px; line-height:1.8; overflow-wrap:anywhere; }
+.parking-notice { padding:15px 20px; border:1px solid #cadfb4; border-radius:8px; background:#f0f7e6; }
+.parking-empty { padding:40px 24px; text-align:center; color:#63788f; font-size:13px; }
+.parking-form { display:flex; flex-wrap:wrap; gap:18px; align-items:end; margin-top:24px; }.parking-form label { display:flex; flex-direction:column; gap:9px; font-size:12px; color:#40566f; font-weight:600; flex:1 1 180px; }
+.parking-form input,.parking-form select,.parking-toolbar select,.visitor-reason input,.parking-search { min-height:44px; border:1px solid #cdd8e4; border-radius:7px; background:#f8fafd; color:#213954; padding:11px 13px; font:inherit; }
+.parking-form input:focus-visible,.parking-form select:focus-visible,.parking-search:focus-visible { outline:2px solid #526e31; outline-offset:2px; }
+.parking-form .button,.admission-actions .button { cursor:pointer; }.parking-edit { padding:28px; margin-bottom:24px; }.parking-search { width:230px; font-size:12px; min-width:0; }
+.parking-shell .page-heading .button { flex:0 0 auto; }.onboarding { max-width:740px; margin:40px auto; padding:40px; }.onboarding .eyebrow { color:#627c37; }.onboarding>p:not(.eyebrow) { margin-top:20px; color:#63788f; line-height:1.8; font-size:14px; }
+.text-action { border:none; background:transparent; padding:8px 0; color:#345f17; text-decoration:underline; font-size:12px; cursor:pointer; }.text-action:disabled { opacity:.5; cursor:not-allowed; }
+.direction-switch { display:flex; gap:10px; margin-bottom:24px; }.direction-switch button { padding:15px 28px; border-radius:8px; background:#e9eef4; color:#53667b; font-weight:650; cursor:pointer; }.direction-switch button[aria-pressed=true] { background:#17283f; color:#d5ef9e; }
+.admission-panel { padding:28px; margin-bottom:24px; border:2px solid #bdd58f; }.admission-panel>p { margin:18px 0; font-size:13px; line-height:1.8; color:#53667b; }.admission-actions { display:flex; gap:14px; margin-top:24px; }.admission-actions .button { flex:0 1 auto; }.visitor-check { display:flex; gap:10px; align-items:center; font-size:13px; }.visitor-reason { display:flex; flex-direction:column; gap:10px; margin-top:20px; font-size:12px; }
+.embedded-scanner .topbar,.embedded-scanner .page-heading,.embedded-scanner footer { display:none; }.embedded-scanner main { padding:0; max-width:none; }.embedded-scanner .app-shell { min-height:0; }
+.duration-label { display:block; color:#6b7c8e; font-size:11px; margin-top:7px; max-width:240px; overflow-wrap:anywhere; }.permit-badge { display:inline-block; padding:6px 10px; border-radius:20px; font-size:11px; background:#fff0e4; color:#8d4d20; }.permit-badge.valid { background:#eaf4db; color:#466525; }
+.member-list { list-style:none; margin-top:20px; }.member-list li { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:16px 0; border-top:1px solid #e8edf3; font-size:12px; overflow-wrap:anywhere; }.member-list small { color:#63788f; }.history-pagination { display:flex; gap:12px; padding:20px; }.history-pagination .button { flex:0 1 auto; }
+@media(max-width:850px) { .parking-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }.parking-shell .page-heading { align-items:start; flex-direction:column; }.vehicle-form label { flex-basis:220px; } }
+@media(max-width:520px) { .parking-toolbar { align-items:stretch; flex-direction:column; }.parking-nav { gap:4px; }.parking-nav button { padding:12px; }.parking-stats { gap:10px; }.parking-stats article { padding:18px; }.panel-heading { flex-wrap:wrap; }.parking-search { width:100%; }.parking-edit,.onboarding,.admission-panel { padding:22px; }.admission-actions { flex-direction:column; }.parking-stats strong { font-size:32px; } }
+
+fieldset.embedded-scanner { margin:0; padding:0; border:0; min-width:0; }
+
+.visitor-reason select { width:100%; min-height:46px; padding:12px; border:1px solid #cdd8e4; border-radius:7px; color:#213954; background:#f8fafd; font:inherit; }
+.spot-tag { display:inline-block; white-space:nowrap; padding:6px 9px; background:#e9eef4; color:#213954; border-radius:5px; font:600 12px ui-monospace,monospace; }
+.driver-summary { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.driver-vehicle-list { list-style:none; padding:0; margin:18px 0 0; }
+.driver-vehicle-list li { display:flex; align-items:center; flex-wrap:wrap; gap:12px; padding:16px 0; border-top:1px solid #e8edf3; }
+.driver-vehicle-list small { color:#63788f; font-size:11px; }
+.spot-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px; margin:24px 0; }
+.spot-card { min-height:125px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; border:1px solid #c9dda7; border-radius:10px; background:#eaf4db; }
+.spot-card strong { color:#213954; font:700 22px ui-monospace,monospace; }
+.spot-card span,.spot-card small { font-size:11px; color:#48632f; }
+.spot-card.occupied { background:#edf1f6; border-color:#cdd8e4; }.spot-card.occupied span,.spot-card.occupied small { color:#63788f; }
+.spot-legend { display:flex; align-items:center; flex-wrap:wrap; gap:20px; font-size:12px; color:#63788f; }.spot-legend span { display:flex; align-items:center; gap:8px; }.spot-legend strong { margin-left:auto; }
+.spot-legend i { width:10px; height:10px; border-radius:3px; }.spot-available-dot { background:#a4c66c; }.spot-occupied-dot { background:#98a9bc; }
+@media(max-width:650px) { .driver-summary { grid-template-columns:1fr; gap:0; }.spot-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.spot-legend strong { margin-left:0; } }
+
+.driver-access-note { margin-top:26px; padding:22px; border:1px solid #d5e2bd; border-radius:9px; background:#f0f7e6; font-size:13px; color:#405b2c; }.driver-access-note p { margin-top:10px; line-height:1.8; }
+.reservation-book { display:flex; align-items:end; flex-wrap:wrap; gap:18px; margin:22px 0; }.reservation-book label { flex:1 1 200px; }.reservation-book .button { cursor:pointer; }.reservation-actions { display:flex; gap:16px; flex-wrap:wrap; }
+.spot-preview { margin:20px 0 30px; }.spot-preview summary { font-size:13px; font-weight:600; cursor:pointer; color:#40566f; }
+
+.permit-result { padding:26px; margin-bottom:24px; }.permit-result-valid { border:2px solid #b8d58a; background:#f2f8e9; }.permit-result-warning { border:2px solid #e0c5ac; background:#fff8f0; }.permit-result>div { display:flex; align-items:center; flex-wrap:wrap; gap:18px; }.permit-result>p { font-size:13px; line-height:1.8; color:#53667b; margin:18px 0; }.permit-result dl { display:flex; flex-wrap:wrap; gap:30px; margin:18px 0; }.permit-result dt { font-size:11px; color:#63788f; margin-bottom:7px; }.permit-result dd { margin:0; font-size:14px; font-weight:600; }.permit-result>small { color:#63788f; font-size:11px; }
+.danger-text { color:#a02e2e; margin-left:14px; }.button.danger { background:#a02e2e; color:white; cursor:pointer; }.permit-delete-dialog { max-width:460px; width:calc(100% - 32px); border:1px solid #dfe5ed; border-radius:14px; padding:30px; color:#19263a; box-shadow:0 15px 60px #17283f44; }.permit-delete-dialog::backdrop { background:#111e3180; }.permit-delete-dialog>p { margin-top:18px; font-size:13px; line-height:1.8; }.permit-delete-dialog .admission-actions { justify-content:flex-end; }
