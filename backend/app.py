@@ -1,75 +1,19 @@
 """Loopback-only ALPR API. Photos remain in memory for one request."""
 from contextlib import asynccontextmanager
-from io import BytesIO
 import logging
-import math
-from statistics import mean
 from threading import Lock
-from time import perf_counter
 from urllib.parse import urlsplit
-import warnings
 
-import numpy as np
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
-from PIL import Image, ImageOps, UnidentifiedImageError
 from starlette.concurrency import run_in_threadpool
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from backend.models import create_engine
+from backend.recognition import recognize
 
 MAX_BYTES = 15 * 1024 * 1024
-MAX_PIXELS = 24_000_000
 ALLOWED_TYPES = {'image/jpeg', 'image/png', 'image/webp'}
-
-
-def decode_image(data):
-    try:
-        with warnings.catch_warnings():
-            warnings.simplefilter('error', Image.DecompressionBombWarning)
-            with Image.open(BytesIO(data)) as original:
-                if original.format not in {'JPEG', 'PNG', 'WEBP'}:
-                    raise HTTPException(415, 'Use a JPG, PNG, or WebP photo.')
-                if original.width * original.height > MAX_PIXELS:
-                    raise HTTPException(413, 'Photo exceeds 24 megapixels. Resize it and try again.')
-                image = ImageOps.exif_transpose(original).convert('RGB')
-                # Models use BGR, and boxes refer to this orientation-corrected image.
-                return np.ascontiguousarray(np.asarray(image)[:, :, ::-1])
-    except HTTPException:
-        raise
-    except (Image.DecompressionBombWarning, Image.DecompressionBombError):
-        raise HTTPException(413, 'Photo dimensions are too large.') from None
-    except (UnidentifiedImageError, OSError, ValueError):
-        raise HTTPException(400, 'This image could not be decoded. Try a different photo.') from None
-
-
-def confidence(value):
-    if isinstance(value, (list, tuple)):
-        value = mean(value) if value else 0
-    value = float(value or 0)
-    return round(max(0, min(1, value)), 4) if math.isfinite(value) else 0
-
-
-def recognize(engine, data):
-    image = decode_image(data)
-    height, width = image.shape[:2]
-    start = perf_counter()
-    results = engine.predict(image)
-    plates = []
-    for result in results:
-        box = result.detection.bounding_box
-        x1, y1 = max(0, min(width, int(box.x1))), max(0, min(height, int(box.y1)))
-        x2, y2 = max(0, min(width, int(box.x2))), max(0, min(height, int(box.y2)))
-        if x2 <= x1 or y2 <= y1:
-            continue
-        plates.append({
-            'text': result.ocr.text.strip().upper() if result.ocr else '',
-            'detectionConfidence': confidence(result.detection.confidence),
-            'recognitionConfidence': confidence(result.ocr.confidence) if result.ocr else 0,
-            'box': {'x': x1 / width, 'y': y1 / height, 'w': (x2 - x1) / width, 'h': (y2 - y1) / height},
-        })
-    plates.sort(key=lambda plate: (bool(plate['text']), plate['recognitionConfidence']), reverse=True)
-    return {'plates': plates, 'width': width, 'height': height, 'elapsedMs': round((perf_counter() - start) * 1000)}
 
 
 def create_app(engine_factory=create_engine):

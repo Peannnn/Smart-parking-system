@@ -1,3 +1,5 @@
+> **Current workflow:** Apply migration 005 after the earlier migrations. Drivers now have only Check in / out and History, with a spot assigned by the administrator on their permit. Reservation and driver spot-selection instructions below describe the earlier versions. See [Assigned parking](ASSIGNED_PARKING.md) for the current workflow.
+
 > **Current account flow:** Normal users see **Park now**, **Reservations**, and **History**, including before a lot is assigned. Complete `003_user_home_reservations.sql` after the earlier migrations. Lot creation is restricted to existing administrators. See [User accounts and reservations](USER_ACCOUNTS.md) for current setup and first-administrator instructions.
 
 # Self-service parking and spot IDs

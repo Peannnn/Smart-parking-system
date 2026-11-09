@@ -1,0 +1,87 @@
+.permit-result {
+  padding: 26px;
+  margin-bottom: 24px;
+}
+.permit-result-valid {
+  border: 2px solid #b8d58a;
+  background: #f2f8e9;
+}
+.permit-result-warning {
+  border: 2px solid #e0c5ac;
+  background: #fff8f0;
+}
+.permit-result > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.permit-result > p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #53667b;
+  margin: 18px 0;
+}
+.permit-result dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 18px 0;
+}
+.permit-result dt {
+  font-size: 11px;
+  color: #63788f;
+  margin-bottom: 7px;
+}
+.permit-result dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.permit-result > small {
+  color: #63788f;
+  font-size: 11px;
+}
+.danger-text {
+  color: #a02e2e;
+  margin-left: 14px;
+}
+.button.danger {
+  background: #a02e2e;
+  color: white;
+  cursor: pointer;
+}
+.permit-delete-dialog {
+  max-width: 460px;
+  width: calc(100% - 32px);
+  border: 1px solid #dfe5ed;
+  border-radius: 14px;
+  padding: 30px;
+  color: #19263a;
+  box-shadow: 0 15px 60px #17283f44;
+}
+.permit-delete-dialog::backdrop {
+  background: #111e3180;
+}
+.permit-delete-dialog > p {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.permit-delete-dialog .admission-actions {
+  justify-content: flex-end;
+}
+
+.spot-card.assigned {
+  background: #fff7e8;
+  border-color: #e3cfa6;
+}
+.spot-card.assigned span,
+.spot-card.assigned small {
+  color: #7a6137;
+}
+.assigned-spot-info {
+  padding: 14px;
+  background: #edf2f8;
+  border-radius: 7px;
+}

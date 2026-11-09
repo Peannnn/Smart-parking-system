@@ -46,7 +46,7 @@ class ApiTests(unittest.TestCase):
             self.assertEqual(client.post('/api/recognize', content=photo(), headers={'content-type': 'text/plain'}).status_code, 415)
             with patch('backend.app.MAX_BYTES', 8):
                 self.assertEqual(client.post('/api/recognize', content=photo(), headers={'content-type': 'image/png'}).status_code, 413)
-            with patch('backend.app.MAX_PIXELS', 10):
+            with patch('backend.image_decoder.MAX_PIXELS', 10):
                 self.assertEqual(client.post('/api/recognize', content=photo(), headers={'content-type': 'image/png'}).status_code, 413)
 
     def test_rejects_remote_origins_and_hosts(self):

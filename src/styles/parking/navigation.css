@@ -1,0 +1,53 @@
+.parking-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.parking-toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #5a7087;
+  font-size: 12px;
+  font-weight: 600;
+}
+.parking-toolbar select {
+  min-width: 230px;
+  max-width: 100%;
+}
+.parking-toolbar .button {
+  flex: 0 0 auto;
+}
+.parking-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 7px;
+  background: #e9eef4;
+  border-radius: 10px;
+}
+.parking-nav button {
+  padding: 13px 18px;
+  border-radius: 7px;
+  color: #53667b;
+  background: transparent;
+  cursor: pointer;
+  font: 600 12px inherit;
+}
+.parking-nav button[aria-current] {
+  background: #17283f;
+  color: white;
+  box-shadow: 0 3px 8px #17283f22;
+}
+.parking-page-title {
+  margin: 30px 0;
+}
+.parking-page-title p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #63788f;
+  line-height: 1.7;
+}

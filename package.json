@@ -12,7 +12,8 @@
     "api": "node scripts/python.mjs backend.app",
     "setup:models": "node scripts/python.mjs backend.setup_models",
     "test": "node --test tests/*.test.js",
-    "test:api": "node scripts/python.mjs unittest discover -s backend/tests"
+    "test:api": "node scripts/python.mjs unittest discover -s backend/tests",
+    "check:files": "node scripts/check-file-sizes.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.1",

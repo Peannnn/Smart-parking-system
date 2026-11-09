@@ -1,0 +1,89 @@
+@media (max-width: 850px) {
+  .topbar {
+    padding: 0 24px;
+    height: 72px;
+  }
+  .workspace-label {
+    display: none;
+  }
+  main {
+    padding: 26px 20px;
+  }
+  .page-heading {
+    padding: 25px;
+  }
+  .step-pill {
+    display: none;
+  }
+  .scanner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 440px) {
+  .topbar {
+    gap: 10px;
+    padding: 0 15px;
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .brand-icon {
+    width: 30px;
+    height: 34px;
+    font-size: 23px;
+    margin-right: 8px;
+  }
+  .device-badge {
+    font-size: 9px;
+    padding: 7px 8px;
+    gap: 6px;
+  }
+  main {
+    padding: 18px 12px;
+  }
+  .page-heading {
+    padding: 23px 20px;
+    border-radius: 10px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+  .panel-heading {
+    padding: 18px 16px;
+    gap: 8px;
+  }
+  h2 {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .small-label {
+    font-size: 8px;
+    letter-spacing: 0.3px;
+  }
+  .capture-body,
+  .review-body {
+    padding: 17px;
+  }
+  .empty-capture {
+    padding: 28px 12px;
+    min-height: 290px;
+  }
+  .plate-illustration {
+    padding: 15px 14px;
+    gap: 10px;
+  }
+  .plate-illustration strong {
+    font-size: 23px;
+    letter-spacing: 2px;
+  }
+  .history-empty {
+    padding: 24px 17px;
+  }
+  footer {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+}

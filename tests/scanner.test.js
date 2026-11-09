@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { loadHistory, saveHistory } from '../src/scanner.js'
+import { loadHistory, saveHistory } from '../src/features/scanner/services/localHistory.js'
 
 test('handles corrupt and unavailable local storage', () => {
   globalThis.localStorage = { getItem: () => '{bad', setItem: () => { throw new Error('quota') } }

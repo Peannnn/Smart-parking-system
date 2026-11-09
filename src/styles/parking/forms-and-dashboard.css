@@ -1,0 +1,222 @@
+.parking-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.parking-stats article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #dfe5ed;
+  border-radius: 12px;
+}
+.parking-stats article:first-child {
+  background: #e9f4d8;
+  border-color: #c9dda7;
+}
+.parking-stats span {
+  font-size: 12px;
+  color: #53667b;
+}
+.parking-stats strong {
+  font-size: 40px;
+  letter-spacing: -2px;
+  color: #17283f;
+}
+.parking-stats small {
+  font-size: 11px;
+  color: #63788f;
+}
+.parking-alert {
+  padding: 20px;
+  margin: 18px 0;
+  border: 1px solid #e6c5b0;
+  border-radius: 10px;
+  background: #fff4eb;
+  color: #814b30;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.parking-notice {
+  padding: 15px 20px;
+  border: 1px solid #cadfb4;
+  border-radius: 8px;
+  background: #f0f7e6;
+}
+.parking-empty {
+  padding: 40px 24px;
+  text-align: center;
+  color: #63788f;
+  font-size: 13px;
+}
+.parking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: end;
+  margin-top: 24px;
+}
+.parking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 12px;
+  color: #40566f;
+  font-weight: 600;
+  flex: 1 1 180px;
+}
+.parking-form input,
+.parking-form select,
+.parking-toolbar select,
+.parking-form input:focus-visible,
+.parking-form select:focus-visible,
+.parking-search:focus-visible {
+  outline: 2px solid #526e31;
+  outline-offset: 2px;
+}
+.parking-form .button,
+.admission-actions .button {
+  cursor: pointer;
+}
+.parking-edit {
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.parking-search {
+  width: 230px;
+  font-size: 12px;
+  min-width: 0;
+}
+.parking-shell .page-heading .button {
+  flex: 0 0 auto;
+}
+.onboarding {
+  max-width: 740px;
+  margin: 40px auto;
+  padding: 40px;
+}
+.onboarding .eyebrow {
+  color: #627c37;
+}
+.onboarding > p:not(.eyebrow) {
+  margin-top: 20px;
+  color: #63788f;
+  line-height: 1.8;
+  font-size: 14px;
+}
+.text-action {
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  color: #345f17;
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+.text-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.direction-switch {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.direction-switch button {
+  padding: 15px 28px;
+  border-radius: 8px;
+  background: #e9eef4;
+  color: #53667b;
+  font-weight: 650;
+  cursor: pointer;
+}
+.direction-switch button[aria-pressed='true'] {
+  background: #17283f;
+  color: #d5ef9e;
+}
+.admission-panel {
+  padding: 28px;
+  margin-bottom: 24px;
+  border: 2px solid #bdd58f;
+}
+.admission-panel > p {
+  margin: 18px 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #53667b;
+}
+.admission-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+.admission-actions .button {
+  flex: 0 1 auto;
+}
+.visitor-check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+.embedded-scanner .topbar,
+.embedded-scanner .page-heading,
+.embedded-scanner footer {
+  display: none;
+}
+.embedded-scanner main {
+  padding: 0;
+  max-width: none;
+}
+.embedded-scanner .app-shell {
+  min-height: 0;
+}
+.duration-label {
+  display: block;
+  color: #6b7c8e;
+  font-size: 11px;
+  margin-top: 7px;
+  max-width: 240px;
+  overflow-wrap: anywhere;
+}
+.permit-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  background: #fff0e4;
+  color: #8d4d20;
+}
+.permit-badge.valid {
+  background: #eaf4db;
+  color: #466525;
+}
+.member-list {
+  list-style: none;
+  margin-top: 20px;
+}
+.member-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid #e8edf3;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.member-list small {
+  color: #63788f;
+}
+.history-pagination {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+.history-pagination .button {
+  flex: 0 1 auto;
+}

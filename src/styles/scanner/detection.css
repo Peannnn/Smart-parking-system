@@ -1,0 +1,93 @@
+.detection-box {
+  position: absolute;
+  padding: 0;
+  min-height: 8px;
+  min-width: 8px;
+  border: 2px solid #d9ed95;
+  border-radius: 2px;
+  background: #d9ed9515;
+}
+.detection-box.selected {
+  border-color: #b5ff59;
+  box-shadow: 0 0 0 1px #223648;
+}
+.detection-box span {
+  position: absolute;
+  left: -2px;
+  top: 100%;
+  padding: 4px 6px;
+  border-radius: 0 0 4px 4px;
+  background: #172d44;
+  color: #dcf3a7;
+  font:
+    600 11px 'Segoe UI',
+    sans-serif;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.scanning-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #132a466b;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.image-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  color: #6b7d91;
+  font-size: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.image-caption span {
+  flex: 1;
+  min-width: 0;
+}
+.recognition-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 13px;
+  color: #65798e;
+  font-size: 11px;
+}
+.recognition-details strong {
+  color: #3f6a38;
+}
+.plate-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.plate-choices button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 10px 13px;
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+  background: #f7f9fc;
+  color: #405977;
+}
+.plate-choices button[aria-pressed='true'] {
+  border-color: #94b758;
+  background: #eef6df;
+  color: #3c582c;
+}
+.plate-choices span {
+  font-size: 10px;
+}
+.plate-choices strong {
+  font:
+    600 15px ui-monospace,
+    Consolas,
+    monospace;
+}

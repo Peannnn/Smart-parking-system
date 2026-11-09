@@ -1,0 +1,81 @@
+.auth-layout {
+  min-height: calc(100vh - 82px);
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+.auth-panel {
+  width: 100%;
+  max-width: 460px;
+}
+.auth-intro {
+  padding: 32px;
+  background: #17283f;
+  color: white;
+}
+.auth-intro > p:last-child {
+  margin-top: 14px;
+  color: #b3bfd0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+}
+.auth-form label {
+  color: #40566f;
+  font-size: 13px;
+  font-weight: 650;
+}
+.auth-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #cdd8e4;
+  border-radius: 7px;
+  background: #f8fafd;
+  color: #213954;
+  font: inherit;
+}
+.auth-form input:focus-visible {
+  outline: 2px solid #526e31;
+  outline-offset: 2px;
+}
+.auth-form .review-hint {
+  margin: 0;
+}
+.auth-form .save-button {
+  margin-top: 12px;
+  cursor: pointer;
+}
+.auth-switch {
+  text-align: center;
+  font-size: 13px;
+  color: #5a7087;
+  line-height: 1.8;
+}
+.auth-switch button {
+  background: none;
+  color: #213954;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 4px;
+}
+.account-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: #edf2f8;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.account-bar .button {
+  cursor: pointer;
+}

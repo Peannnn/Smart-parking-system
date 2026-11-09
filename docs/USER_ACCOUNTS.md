@@ -1,3 +1,5 @@
+> **Current workflow:** Apply migration 005 after the earlier migrations. Drivers now have only Check in / out and History, with a spot assigned by the administrator on their permit. Reservation and driver spot-selection instructions below describe the earlier versions. See [Assigned parking](ASSIGNED_PARKING.md) for the current workflow.
+
 > **Administrator update:** Admin accounts use **Check permit** instead of Park now. Run migration 004 after the migrations below. See [Permit management](PERMIT_MANAGEMENT.md) for current checker and edit behavior. Normal-user navigation is unchanged.
 
 # Normal-user home, administrator access and reservations

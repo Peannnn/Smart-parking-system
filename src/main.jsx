@@ -1,10 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import Auth from './Auth.jsx'
-
+import './styles/index.css'
+import AuthScreen from './features/auth/AuthScreen.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Auth />
+    <AuthScreen />
   </StrictMode>,
 )

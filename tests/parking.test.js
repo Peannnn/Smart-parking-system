@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { normalizePlate, validPlate, permitStatus, duration, csvCell } from '../src/parking.js'
+import { normalizePlate, validPlate, permitStatus, duration, csvCell } from '../src/shared/parkingFormatters.js'
 
 test('normalizes and validates reviewed plates', () => {
   assert.equal(normalizePlate(' abC  123 '), 'ABC 123')

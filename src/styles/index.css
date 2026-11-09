@@ -1,0 +1,18 @@
+/* Import order preserves the existing appearance and mobile overrides. */
+@import './base.css';
+@import './shared/layout.css';
+@import './scanner/capture.css';
+@import './shared/buttons.css';
+@import './scanner/review.css';
+@import './shared/tables.css';
+@import './scanner/camera.css';
+@import './scanner/detection.css';
+@import './shared/responsive.css';
+@import './auth/account.css';
+@import './parking/navigation.css';
+@import './parking/forms-and-dashboard.css';
+@import './parking/responsive.css';
+@import './parking/driver.css';
+@import './parking/spots.css';
+@import './parking/access.css';
+@import './parking/permits.css';

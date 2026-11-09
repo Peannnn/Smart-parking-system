@@ -1,0 +1,13 @@
+.driver-access-note {
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px solid #d5e2bd;
+  border-radius: 9px;
+  background: #f0f7e6;
+  font-size: 13px;
+  color: #405b2c;
+}
+.driver-access-note p {
+  margin-top: 10px;
+  line-height: 1.8;
+}

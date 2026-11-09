@@ -1,6 +1,6 @@
 import { test, mock } from 'node:test'
 import assert from 'node:assert/strict'
-import { recognizePhoto } from '../src/alpr.js'
+import { recognizePhoto } from '../src/features/scanner/services/recognitionApi.js'
 const photo = new Blob(['test'], { type: 'image/jpeg' })
 
 test('sends photos only to the relative local endpoint and returns detections', async () => {
