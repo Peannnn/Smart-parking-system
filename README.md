@@ -1,4 +1,4 @@
-# SmartPark — Smart Parking Management System
+# SmartPark 
 
 SmartPark is a parking management prototype that combines license-plate recognition, vehicle permits, dedicated parking spot assignments, and occupancy tracking. Drivers can record their own arrivals and departures, while administrators manage the lot and check whether a vehicle has a valid permit.
 
